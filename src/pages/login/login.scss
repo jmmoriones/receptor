@@ -1,0 +1,33 @@
+page-login {
+    ion-content{
+        background-image: url("../../assets/images/fondo-01.png") !important;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        .form-login{
+            background: rgba(95, 95, 95, 0.47);
+            padding-top:15%;
+            height: 65vh;
+        }
+    }
+    ion-header{
+        height: 35vh;
+        width: 100vw;
+        text-align: center;
+        position: relative;
+
+        .logo{
+            max-width: 150px;
+            margin: 0 auto;
+            padding-top: 6vh;
+        }
+    }
+    .avatar-user{
+        position: absolute;
+        bottom: -30%;
+        z-index: 10;
+        img{
+            width: 30%;
+        }
+    }
+}
