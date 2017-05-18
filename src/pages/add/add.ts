@@ -2,19 +2,16 @@ import { Component } from '@angular/core';
 import { NavController, AlertController, PopoverController } from 'ionic-angular';
 import { BarcodeScanner,BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
 
-import { MorePage } from '../more/more';
-import { addPage } from '../add/add';
+
 import { HomePopover } from '../homePopover/homePopover';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-add',
+  templateUrl: 'add.html'
 })
-export class HomePage {
+export class addPage {
   public codes: any = []
   options: BarcodeScannerOptions;
-  morePage: any = MorePage;
-  aPage: any = addPage;
   constructor(public alertCtrl: AlertController,private barcode: BarcodeScanner,public navCtrl: NavController, public popoverCtrl: PopoverController) {
   }
 

@@ -6,8 +6,35 @@ page-login {
         background-position: center center;
         .form-login{
             background: rgba(95, 95, 95, 0.47);
-            padding-top:15%;
             height: 65vh;
+
+            .item-form{
+                background-color: transparent;
+                color: #FFF;
+            }
+            .clickME{
+                padding: 10px;
+                width: 80%;
+                margin-bottom: 3%;
+                background-color: transparent;
+                color: white;
+                font-size: 20px;
+            }
+
+        }
+        .select-person{
+            background: rgba(95, 95, 95, 0.47);
+            color: #FFF;
+            text-align: center;
+            
+            top: 0%;
+            padding-top: 14%;
+            ion-select{
+                margin: 0 auto;
+                color: white;
+                padding-top: 0px;
+                padding-bottom: 50px;
+            }
         }
     }
     ion-header{
@@ -24,10 +51,21 @@ page-login {
     }
     .avatar-user{
         position: absolute;
-        bottom: -30%;
+        bottom: -65px;
         z-index: 10;
+        width: 100vw;
         img{
-            width: 30%;
+            width: 110px;
+            border-radius: 50%;
         }
+        h3{
+            margin:0px;
+        }
+    }
+    .list-users{
+        height: 45%;
+    }
+    .hide-password{
+        display: none;
     }
 }

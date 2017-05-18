@@ -11,7 +11,6 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class LoginProvider {
   constructor(public http: Http) {
-    
   }
   validar(user:any){
   	console.log(user);
@@ -23,5 +22,8 @@ export class LoginProvider {
   getUsers(){	
   	return this.http.get("http://192.168.0.16:3000/api/receivers")
   	.map((response:Response)=>response.json());
+  }
+  reposGithub(){
+    return this.http.get("https://api.github.com/users/codigofacilito/repos");
   }
 }

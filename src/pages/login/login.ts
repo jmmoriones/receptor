@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AlertController } from 'ionic-angular';
+import { AlertController, ActionSheetController  } from 'ionic-angular';
 
 //Provider
 import { LoginProvider } from '../../providers/login';
@@ -18,14 +18,40 @@ import {HomePage} from '../home/home';
   templateUrl: 'login.html',
 })
 export class Login {
+  @ViewChild('contentPassword')contentPassword;
+  @ViewChild('contentUsers')contentUsers;
+
   user : any = {email: '',pass:''};
   public users : any = [];
-  constructor(public alertCtrl: AlertController,public navCtrl: NavController, public navParams: NavParams, public loginPro: LoginProvider) {
+  public repositories:any;
+  public sendHome: any = [];
+  public repOne: any = [];
+  constructor(public alertCtrl: AlertController,public navCtrl: NavController, public navParams: NavParams, public loginPro: LoginProvider, public actionSheetCtrl: ActionSheetController) {
+    this.repositories = [];
+
+    this.repOne = {name:"Seleccione un usuario",  owner:{
+      image:"https://avatars0.githubusercontent.com/u/10576462?v=3"
+    }};
+
+    this.loginPro.reposGithub().subscribe((data) =>{
+      this.repositories = data.json();
+      console.log(this.repositories);
+    });
   }
 
   beforeSend(user:any){
     console.log(user);
-    //let users = this.loginP.getUsers();
+  }
+  setMainRepository(repository){
+    this.repOne = repository;
+    console.log(this.repOne);
+    this.contentPassword.nativeElement.style.display = 'block';
+    //this.contentUsers.nativeElement.style.display = 'none';
+    if(this.users.password === this.repOne.id){
+      console.log("Bien")
+    }else{
+      console.log("Mal")
+    }
   }
   
   ionViewDidLoad() {
@@ -52,7 +78,7 @@ export class Login {
   	this.loginPro.validar(user).subscribe(data=>{
       console.log(data);
       if(data.status === 200) {
-        this.navCtrl.push(HomePage);  
+        this.navCtrl.push(HomePage, [this.sendHome]);  
       }
       else{
         let alert = this.alertCtrl.create({
