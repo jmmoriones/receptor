@@ -13,8 +13,8 @@ import { HomePopover } from '../homePopover/homePopover';
 export class HomePage {
   public codes: any = []
   options: BarcodeScannerOptions;
-  morePage: any = MorePage;
-  aPage: any = addPage;
+  public morePage: any = MorePage;
+  public aPage: any = addPage;
   constructor(public alertCtrl: AlertController,private barcode: BarcodeScanner,public navCtrl: NavController, public popoverCtrl: PopoverController) {
   }
 

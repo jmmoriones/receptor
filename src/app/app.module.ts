@@ -10,7 +10,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Login } from '../pages/login/login';
 import { MorePage } from '../pages/more/more';
-import { HomePopover } from '../pages/homePopover/homePopover'
+import { HomePopover } from '../pages/homePopover/homePopover';
+import { addPage } from '../pages/add/add';
 
 //Provider
 import { LoginProvider } from '../providers/login';
@@ -20,7 +21,8 @@ import { LoginProvider } from '../providers/login';
     HomePage,
     Login,
     MorePage,
-    HomePopover
+    HomePopover,
+    addPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { LoginProvider } from '../providers/login';
     HomePage,
     Login,
     MorePage,
-    HomePopover
+    HomePopover,
+    addPage
   ],
   providers: [
     StatusBar,
