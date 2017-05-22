@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 
+import { TransactionGoodPage } from '../transactiongood/transaction';
+
 /**
  * Generated class for the Login page.
  *
@@ -20,5 +22,7 @@ export class MorePage {
   ionViewDidLoad() {
 
   }
-
+  goodProcess(){
+    this.navCtrl.push(TransactionGoodPage, {});
+  }
 }

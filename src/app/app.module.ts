@@ -12,6 +12,8 @@ import { Login } from '../pages/login/login';
 import { MorePage } from '../pages/more/more';
 import { HomePopover } from '../pages/homePopover/homePopover';
 import { addPage } from '../pages/add/add';
+import { TransactionGoodPage } from '../pages/transactiongood/transaction'
+import { ModalPage } from '../pages/modalSuccess/modal';
 
 //Provider
 import { LoginProvider } from '../providers/login';
@@ -22,7 +24,9 @@ import { LoginProvider } from '../providers/login';
     Login,
     MorePage,
     HomePopover,
-    addPage
+    addPage,
+    TransactionGoodPage,
+    ModalPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,9 @@ import { LoginProvider } from '../providers/login';
     Login,
     MorePage,
     HomePopover,
-    addPage
+    addPage,
+    TransactionGoodPage,
+    ModalPage
   ],
   providers: [
     StatusBar,

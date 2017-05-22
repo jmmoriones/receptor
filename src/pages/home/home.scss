@@ -10,6 +10,12 @@ page-home {
 			}
 		}
 	}
+	.tabs-md .tab-button[aria-selected=true] .tab-button-icon{
+		color: #00e6ff;
+	}
+	.tabs-md .tab-button-icon{
+	    font-size: 28px !important;
+	}
 	 ion-content{
 		background-image: url("../../assets/images/fondo-01.png") !important;
 		background-size:cover;
