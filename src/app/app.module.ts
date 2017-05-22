@@ -9,6 +9,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Login } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 import { MorePage } from '../pages/more/more';
 import { HomePopover } from '../pages/homePopover/homePopover';
 import { addPage } from '../pages/add/add';
@@ -26,7 +27,8 @@ import { LoginProvider } from '../providers/login';
     HomePopover,
     addPage,
     TransactionGoodPage,
-    ModalPage
+    ModalPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { LoginProvider } from '../providers/login';
     HomePopover,
     addPage,
     TransactionGoodPage,
-    ModalPage
+    ModalPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,

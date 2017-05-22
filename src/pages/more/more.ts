@@ -16,9 +16,13 @@ import { TransactionGoodPage } from '../transactiongood/transaction';
   templateUrl: 'more.html',
 })
 export class MorePage {
-
-  constructor(public alertCtrl: AlertController,public navCtrl: NavController, public navParams: NavParams) {  }
-
+  public user:any={name:null,email:null,cedula:null};
+  constructor(public alertCtrl: AlertController,public navCtrl: NavController, public navParams: NavParams) { 
+  this.user.name=navParams.get('name');
+  this.user.email=navParams.get('email');
+  this.user.cedula=navParams.get('cedula');
+   }
+  
   ionViewDidLoad() {
 
   }

@@ -26,4 +26,15 @@ export class LoginProvider {
   reposGithub(){
     return this.http.get("https://api.github.com/users/codigofacilito/repos");
   }
+  validarCodeUser(code:any){
+    console.log(code);
+    
+    return this.http.post("http://35.184.34.17/api/user-code", code)
+    .map((response:Response)=>response.json());
+  }
+  createUser(user:any){
+    
+    return this.http.post("http://35.184.34.17/api/user", user)
+    .map((response:Response)=>response.json());
+  }
 }
