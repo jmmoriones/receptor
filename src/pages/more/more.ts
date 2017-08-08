@@ -17,16 +17,20 @@ import { TransactionGoodPage } from '../transactiongood/transaction';
 })
 export class MorePage {
   public user:any={name:null,email:null,cedula:null};
+  public product:any={kilo:null,estopa:null,rayas:null};
   constructor(public alertCtrl: AlertController,public navCtrl: NavController, public navParams: NavParams) { 
-  this.user.name=navParams.get('name');
-  this.user.email=navParams.get('email');
-  this.user.cedula=navParams.get('cedula');
-   }
+	  this.user.name=navParams.get('name');
+	  this.user.email=navParams.get('email');
+	  this.user.cedula=navParams.get('cedula');
+  }
   
   ionViewDidLoad() {
 
   }
   goodProcess(){
     this.navCtrl.push(TransactionGoodPage, {});
+  }
+  submit(product:any){
+  	console.log(product);
   }
 }

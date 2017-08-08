@@ -15,16 +15,16 @@ export class LoginProvider {
   validar(user:any){
   	console.log(user);
   	
-  	return this.http.post("http://192.168.0.16:3000/api/receiver/sign-in", user)
+  	return this.http.post("http://35.184.34.17/api/receiver/sign-in", user)
   	.map((response:Response)=>response.json());
   }
 
   getUsers(){	
-  	return this.http.get("http://192.168.0.16:3000/api/receivers")
+  	return this.http.get("http://35.184.34.17/api/receivers")
   	.map((response:Response)=>response.json());
   }
   reposGithub(){
-    return this.http.get("https://api.github.com/users/codigofacilito/repos");
+    return this.http.get("http://35.184.34.17/api/receivers");
   }
   validarCodeUser(code:any){
     console.log(code);

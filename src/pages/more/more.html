@@ -22,28 +22,32 @@
             </ion-item>
         </ion-list>
     </ion-item>
-    <ion-list class="data-complementation">
+    <form (ngSubmit)="submit(f.value)" #f="ngForm" >
+        <ion-list class="data-complementation">
         <h4 text-uppercase class="padd-left">Datos para completar</h4>
         <ion-item>
-            <ion-input type="text" placeholder="Peso en kilogramos" class="border-input"></ion-input> <span>Kilogramos</span>
+            <ion-input type="text" placeholder="Peso en kilogramos" class="border-input" name="kilogramos" ngModel></ion-input> <span>Kilogramos</span>
         </ion-item>
         <h4 text-uppercase class="padd-left">Tipo de empaque y peso</h4>
         <ion-grid>
             <ion-row>
                 <ion-col>
-                    <ion-input type="text" placeholder="Numero de empaques" class="border-input"></ion-input>
+                    <ion-input type="text" placeholder="Numero de empaques" class="border-input"name="estopa" ngModel></ion-input>
                     <p text-center>Estopa</p>
                 </ion-col>
                 <ion-col>
-                    <ion-input type="text" placeholder="Numero de empaques" class="border-input"></ion-input>
-                    <p text-center>3 Rallas</p>
+                    <ion-input type="text" placeholder="Numero de empaques" class="border-input" name="rayas" ngModel></ion-input>
+                    <p text-center>3 Rayas</p>
                 </ion-col>
                 <ion-col>
-                    <ion-input type="text" placeholder="Numero de empaques" class="border-input"></ion-input>
+                    <ion-input type="text" placeholder="Numero de empaques" class="border-input" name="kilo" ngModel></ion-input>
                     <p text-center>Kilo</p>
                 </ion-col>
             </ion-row>
         </ion-grid>
     </ion-list>
-    <button ion-button round class="btn-scanner" (click)="goodProcess()">Generar formato</button>
+    <button ion-button round class="btn-scanner" type="submit"  [disabled]="!f.valid" >Generar formato</button>
+
+    </form>
+    
 </ion-content>
